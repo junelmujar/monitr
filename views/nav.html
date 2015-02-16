@@ -1,0 +1,18 @@
+<br>
+<div class="text-center">
+	<img src="http://localhost:8080/img/avatar.jpg" alt="" class="img-circle" width="60%">
+</div>
+<hr>
+
+<ul class="nav nav-sidebar nav-global">
+	<li id="dashboard"><a href="/dashboard"><i class="fa fa-home"></i> Dashboard</a></li>
+	<li id="activities"><a href="/activities"><i class="fa fa-th-list"></i> Activities</a></li>
+	<li id="projects"><a href="/projects"><i class="fa fa-file-o"></i> Projects</a></li>
+	<li id="users"><a href="/users"><i class="fa fa-user"></i> Users</a></li>
+</ul> 
+
+<script>
+	$(document).ready(function() {
+		$('#{{ route }}').addClass('active');
+	});
+</script>

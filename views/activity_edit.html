@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+    {% include "./nav.html" %}
+{% endblock %}
+
+{% block content %}
+            
+	<h1 class="module-header">
+		<i class="fa fa-list"></i> Activities
+	</h1>
+	
+    {% if activity %}
+
+        <form action="/activities/edit" method="POST" class="table">
+        	<div class="panel panel-default">
+
+        		<div class="panel-heading">Edit Activity Details</div>
+
+                <div class="panel-toolbar">
+                    <i class="fa fa-angle-left"></i> <a href="/activities">Go Back</a>
+                </div>
+
+        		<div class="panel-body">
+                    <input type="hidden" name="id" value="{{ activity.id }}" />
+                    <div class="form-group">
+                        <label for="title" class="control-label">Title</label>
+                        <input type="text" name="title" value="{{ activity.title }}" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description" class="control-label">Description</label>
+                        <textarea name="description" id="description" cols="30" rows="10" class="form-control">
+                            {{ activity.description }}
+                        </textarea>
+                    </div>
+
+                    <hr>
+                    <div class="clearfix">
+                        <input type="reset" value="Reset" class="btn btn-default pull-left" />
+                        <input type="submit" value="Submit" class="btn btn-primary pull-right" />
+                    </div>
+                    
+        		</div>
+        	</div>
+        </form>
+
+	{% endif %}
+
+{% endblock %}

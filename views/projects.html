@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+    {% include "./nav.html" %}
+{% endblock %}
+
+{% block content %}
+        	
+	<h1 class="module-header">
+		<i class="fa fa-file-o"></i> Projects
+	</h1>
+	
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Actions</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#"><i class="fa fa-file-o"></i> New</a></li>
+                    <li><a href="#"><i class="fa fa-calendar"></i> Calendar</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Filter By Month <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">January</a></li>
+                        <li><a href="#">February</a></li>
+                        <li><a href="#">March</a></li>
+                        <li><a href="#">April</a></li>
+                        <li><a href="#">May</a></li>
+                        <li><a href="#">June</a></li>
+                        <li><a href="#">July</a></li>
+                        <li><a href="#">August</a></li>
+                        <li><a href="#">September</a></li>
+                        <li><a href="#">October</a></li>
+                        <li><a href="#">November</a></li>
+                        <li><a href="#">December</a></li>
+                        
+                      </ul>
+                    </li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+
+         </div><!-- /.container-fluid -->
+    </nav>
+    
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">Activities</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aspernatur voluptatem quia ab quae, ad excepturi voluptate, laboriosam temporibus nostrum voluptates voluptatum deserunt possimus magni totam id animi neque ut?
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">Projects</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aspernatur voluptatem quia ab quae, ad excepturi voluptate, laboriosam temporibus nostrum voluptates voluptatum deserunt possimus magni totam id animi neque ut?
+				</div>
+			</div>	
+		</div>
+	</div>
+
+{% endblock %}

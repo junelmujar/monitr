@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+    {% include "./nav.html" %}
+{% endblock %}
+
+{% block content %}
+            
+	<h2 class="module-header">
+		<i class="fa fa-list"></i> Activities
+	</h2>
+	
+    {% if activity %}
+
+    	<div class="panel panel-default">
+
+            <div class="panel-toolbar clearfix">
+                <h3 class="pull-left" style="margin: 0;">{{ activity.title|safe }}</h3>
+                <span class="btn-group pull-right">
+                    <a href="/activities" class="btn btn-primary btn-sm"><i class="fa fa-angle-left"></i> Back</a>
+                    <a href="/activities/edit/{{ activity.id }}" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i> Edit</a>
+                </span>
+            </div>
+
+    		<div class="panel-body">
+                {{ activity.description|safe }}
+    		</div>
+            
+    	</div>
+
+	{% endif %}
+
+{% endblock %}
